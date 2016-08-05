@@ -1,0 +1,27 @@
+{{!< default}}
+
+  {{#foreach posts}}
+  <article class="{{post_class}}">
+      <header class="post-header">
+          <h1 class="post-title">
+            <a href="{{url}}">{{{title}}}</a>
+          </h1>
+          <section class="post-meta">
+              <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time>
+              {{#has tag="gallery"}}<i class="header-icon icon-gallery"></i>{{/has}}
+              <span class="tags">{{tags}}</span>
+          </section>
+      </header>
+      <a class="read-more" href="{{url}}">
+      {{^has tag="gallery"}}
+        <section class="post-excerpt">
+            <p>{{excerpt words="30"}}...</p>
+        </section>
+      {{/has}}
+      </a>
+  </article>
+  {{/foreach}}
+</div>
+
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}

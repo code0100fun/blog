@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link href="//gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{asset "css/prism.css"}}">
+    <link rel="stylesheet" href="{{asset "css/poole.css"}}">
+    <link rel="stylesheet" href="{{asset "css/iconmoon.css"}}">
+    <link rel="stylesheet" href="{{asset "css/syntax.css"}}">
+    <link rel="stylesheet" href="{{asset "css/oscar.css"}}">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,300,300italic">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset "apple-touch-icon-precomposed.png"}}">
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+  </head>
+
+  <body class="{{body_class}}">
+
+    <div class="masthead">
+        <div class="container">
+            <h2 class="masthead-title">
+                <a href="{{@blog.url}}" title="Home">{{@blog.title}}</a>
+                <small>{{@blog.description}}</small>
+            </h2>
+        </div>
+        {{navigation}}
+    </div>
+
+    <div class="container content">
+        {{{body}}}
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/gallery.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/oscar.js"}}"></script>
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+  </body>
+</html>
